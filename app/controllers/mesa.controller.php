@@ -32,6 +32,8 @@ class MesaController {
     }
 
     function addMesa() {
+        
+        $this->authHelper->checkLoggedIn();
         $juego = $_POST['juego'];
         $director = $_POST['director'];
         $cantidadJugadores = $_POST['cantidadJugadores'];
@@ -45,6 +47,7 @@ class MesaController {
 
     function addCampeon() {
 
+        $this->authHelper->checkLoggedIn();
         $nombre = $_POST['nombre'];
         $duracion = $_POST['duracion'];
         $fecha = $_POST['fecha'];
