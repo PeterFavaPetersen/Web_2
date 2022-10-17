@@ -15,17 +15,9 @@ if (!empty($_GET['action'])) {
     $action = 'list'; // acción por defecto
 }
 
-// parsea la accion Ej: dev/juan --> ['dev', juan]
 $params = explode('/', $action);
 
-// instancio el unico controller que existe por ahora
-//$mesaController = new MesaController();
-
-
 //Mi linda tabla de ruteo
-
-
-//$logCotroller = new LogController();
 
 switch ($params[0]) {
     case 'showRegister':
@@ -63,7 +55,6 @@ switch ($params[0]) {
     case 'addJuego':
         $mesaController = new MesaController();
         $mesaController->addMesa();
-        //$mesaController->addJuego();
         break;
     
     case 'addCampeon':
